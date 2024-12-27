@@ -34,6 +34,7 @@
 
 #include "board_common.h"
 #include "drivers/driver_leds.h"
+#include "drivers/driver_watchdog.h"
 
 /*
  *  =============================== ADCBuf ===============================
@@ -341,6 +342,9 @@ void board_initialize(void)
 
     /* Get reset reason */
     reset_source = ti_lib_sys_ctrl_reset_source_get();
+
+    /* Initialize watch-dog */
+    watchdog_initialize();
 
     /* Initialize pins */
     if (ti_lib_driver_pin_init(BoardGpioInitTable) != PIN_SUCCESS) {
