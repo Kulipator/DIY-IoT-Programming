@@ -490,9 +490,7 @@ extern "C" {
 /* drivers/utils/RingBuf.h */
 #define ti_lib_driver_ring_buf_construct(...)                   RingBuf_construct(__VA_ARGS__)
 #define ti_lib_driver_ring_buf_put(...)                         RingBuf_put(__VA_ARGS__)
-#define ti_lib_driver_ring_buf_put_arr(...)                     RingBuf_put_arr(__VA_ARGS__)
 #define ti_lib_driver_ring_buf_get(...)                         RingBuf_get(__VA_ARGS__)
-#define ti_lib_driver_ring_buf_get_arr(...)                     RingBuf_get_arr(__VA_ARGS__)
 #define ti_lib_driver_ring_buf_get_count(...)                   RingBuf_getCount(__VA_ARGS__)
 #define ti_lib_driver_ring_buf_is_full(...)                     RingBuf_isFull(__VA_ARGS__)
 

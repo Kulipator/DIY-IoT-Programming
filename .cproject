@@ -53,7 +53,7 @@
                                 <option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.GEN_FUNC_SUBSECTIONS.643380868" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.GEN_FUNC_SUBSECTIONS" value="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.GEN_FUNC_SUBSECTIONS.on" valueType="enumerated"/>
                                 <option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.FLOAT_SUPPORT.1302015097" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.FLOAT_SUPPORT" value="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.FLOAT_SUPPORT.vfplib" valueType="enumerated"/>
                                 <option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.CMD_FILE.1201071202" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.CMD_FILE" valueType="stringList">
-                                    <listOptionValue value="${PROJECT_ROOT}/tools/ci/tests/WatchdogTest_CC1310.txt"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/tools/ci/tests/ConsoleTest_CC1310.txt"/>
                                 </option>
                             </tool>
                             <tool id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.exe.linkerDebug.1461003148" name="Arm Linker" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.exe.linkerDebug">
@@ -140,7 +140,7 @@
                                 <option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.FLOAT_SUPPORT.352917042" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.FLOAT_SUPPORT" value="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.FLOAT_SUPPORT.vfplib" valueType="enumerated"/>
                                 <option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.DEBUGGING_MODEL.1675904712" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.DEBUGGING_MODEL" value="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.DEBUGGING_MODEL.SYMDEBUG__DWARF" valueType="enumerated"/>
                                 <option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.CMD_FILE.773877829" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.CMD_FILE" valueType="stringList">
-                                    <listOptionValue value="${PROJECT_ROOT}/tools/ci/tests/WatchdogTest_CC1310.txt"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/tools/ci/tests/ConsoleTest_CC1310.txt"/>
                                 </option>
                             </tool>
                             <tool id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.exe.linkerRelease.738535584" name="Arm Linker" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.exe.linkerRelease">
