@@ -33,6 +33,7 @@
  */
 
 #include <ti-lib.h>
+#include "boards/board_common.h"
 #include "driver_leds.h"
 
 #ifndef Board_PIN_LED0_INVERSE
@@ -159,7 +160,7 @@ void leds_blink_all(uint8_t times)
     /* Disable pin functions if applied */
     for (j = 0; j < LEDS_COUNT; j++)
     {
-        leds_single_set_mux(driver_leds_leds[j], PINCC26XX_MUX_GPIO);
+        leds_single_set_mux(j, PINCC26XX_MUX_GPIO);
     }
 
     for (i = 0; i < times; i++)
@@ -167,14 +168,14 @@ void leds_blink_all(uint8_t times)
         /* Turn on */
         for (j = 0; j < LEDS_COUNT; j++)
         {
-            leds_single_on(driver_leds_leds[j]);
+            leds_single_on(j);
         }
         /* Wait */
         SLEEP_MSECONDS(50);
         /* Turn off */
         for (j = 0; j < LEDS_COUNT; j++)
         {
-            leds_single_off(driver_leds_leds[j]);
+            leds_single_off(j);
         }
         /* Wait */
         SLEEP_MSECONDS(450);
