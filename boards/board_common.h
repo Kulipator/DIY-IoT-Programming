@@ -155,6 +155,11 @@
 #define BOARD_DIO14_ANALOG PIN_UNASSIGNED
 #endif
 
+#define SLEEP_SECONDS(x) { rfn_posix_sleep(x); }
+#define SLEEP_USECONDS(x) { rfn_posix_usleep(x); }
+#define SLEEP_MSECONDS(x) SLEEP_USECONDS(x * 1000)
+#define SLEEP_BREAK() { rfn_posix_sleep_break(); }
+
 #ifdef __cplusplus
 extern "C" {
 #endif

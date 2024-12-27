@@ -32,7 +32,8 @@
  * @}
  */
 
- #include "board_common.h"
+#include "board_common.h"
+#include "drivers/driver_leds.h"
 
 /*
  *  =============================== ADCBuf ===============================
@@ -346,4 +347,7 @@ void board_initialize(void)
         /* Error with PIN_init */
         while (1);
     }
+
+    /* Initialize LEDs */
+    leds_init();
 }
