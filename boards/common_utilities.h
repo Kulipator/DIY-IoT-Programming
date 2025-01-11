@@ -125,6 +125,16 @@ bool rfn_posix_sleep(unsigned sec);
  */
 void rfn_posix_sleep_break(void);
 
+/**
+ * @brief   Calculate CRC16-XModem
+ *
+ * @param[in]   msg         Source array
+ * @param[in]   size        Size of source array
+ *
+ * @returns     CRC checksum
+ */
+uint16_t calculate_crc16_xmodem(uint8_t *msg, size_t size);
+
 #ifdef __cplusplus
 }
 #endif

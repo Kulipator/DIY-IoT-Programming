@@ -98,3 +98,27 @@ void rfn_posix_sleep_break(void)
         ti_lib_driver_semaphorep_post(rfn_usleep_semaphore);
     }
 }
+
+uint16_t calculate_crc16_xmodem(uint8_t *msg, size_t size)
+{
+    uint8_t x;
+    uint16_t crc = 0x0000;
+
+    while (size--)
+    {
+        crc = crc ^ (uint16_t)*msg++ << 8;
+        x = 8;
+        do
+        {
+            if (crc & 0x8000)
+            {
+                crc = crc << 1 ^ 0x1021;
+            }
+            else
+            {
+                crc = crc << 1;
+            }
+        } while(--x);
+    }
+    return (crc);
+}
