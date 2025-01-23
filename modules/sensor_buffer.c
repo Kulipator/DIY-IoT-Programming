@@ -28,7 +28,7 @@
  * @file
  * @brief       Sensor readouts buffer implementation
  *
- * @author      Archil Pirmisashvili <archil@rf-networks.com>
+ * @author      Archil Pirmisashvili <kulipator@gmail.com>
  * @}
  */
 

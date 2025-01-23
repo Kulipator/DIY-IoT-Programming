@@ -27,7 +27,7 @@
  * @file
  * @brief       Board specific implementations for TI CC1310 Launchpad
  *
- * @author      Archil Pirmisashvili <archil@rf-networks.com>
+ * @author      Archil Pirmisashvili <kulipator@gmail.com>
  * @}
  */
 

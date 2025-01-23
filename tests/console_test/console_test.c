@@ -28,7 +28,7 @@
  * @file
  * @brief       This test puts emulates console echo.
  *
- * @author      Archil Pirmisashvili <archil@rf-networks.com>
+ * @author      Archil Pirmisashvili <kulipator@gmail.com>
  * @}
  */
 

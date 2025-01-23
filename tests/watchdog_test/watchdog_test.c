@@ -31,7 +31,7 @@
  *              is reached. When SLEEP_MAX_VALUE is reached period is set to SLEEP_START_VALUE
  *              and application stops resetting the watchdog, which will lead to watchdog reset.
  *
- * @author      Archil Pirmisashvili <archil@rf-networks.com>
+ * @author      Archil Pirmisashvili <kulipator@gmail.com>
  * @}
  */
 

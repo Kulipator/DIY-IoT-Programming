@@ -38,7 +38,7 @@
  *               reader that this is a call to TI SimpleLink SDK's sources and not a call to a
  *               function inside RF-Software
  *
- *  @author      Archil Pirmisashvili <archil@rf-networks.com>
+ *  @author      Archil Pirmisashvili <kulipator@gmail.com>
  */
 #ifndef TI_LIB_H
 #define TI_LIB_H

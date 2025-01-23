@@ -28,7 +28,7 @@
  * @file
  * @brief       Board specific definitions for TI CC1350 Launchpad
  *
- * @author      Archil Pirmisashvili <archil@rf-networks.com>
+ * @author      Archil Pirmisashvili <kulipator@gmail.com>
  */
 
 #ifndef BOARDS_CC1350_LAUNCHPAD_BOARD_H

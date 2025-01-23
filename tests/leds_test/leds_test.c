@@ -30,7 +30,7 @@
  *              Each cycle period is incremented by SLEEP_INCREMENT until SLEEP_MAX_VALUE
  *              is reached. When SLEEP_MAX_VALUE is reached period is set to SLEEP_START_VALUE.
  *
- * @author      Archil Pirmisashvili <archil@rf-networks.com>
+ * @author      Archil Pirmisashvili <kulipator@gmail.com>
  * @}
  */
 

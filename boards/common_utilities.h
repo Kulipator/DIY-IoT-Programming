@@ -28,7 +28,7 @@
  * @file
  * @brief       Common utilities definition
  *
- * @author      Archil Pirmisashvili <archil@rf-networks.com>
+ * @author      Archil Pirmisashvili <kulipator@gmail.com>
  */
 
 #ifndef BOARDS_COMMON_UTILITIES_H

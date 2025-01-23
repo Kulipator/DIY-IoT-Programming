@@ -21,35 +21,35 @@
  * SOFTWARE.
  */
 
-/*
- * @ingroup     tests_settings_test
- * @{
- *
+/**
  * @file
- * @brief       This test checks functionality of settings module.
+ * @brief       This application implements Gateway Unit.
  *
  * @author      Archil Pirmisashvili <kulipator@gmail.com>
  * @}
  */
 
+#ifdef APPS_GATEWAY
 
-#ifdef TESTS_SETTINGS_TEST
-#include <stdio.h>
 #include "boards/board_common.h"
 #include "drivers/driver_leds.h"
 #include "drivers/driver_watchdog.h"
-#include "drivers/driver_console.h"
 #include "modules/settings.h"
+#include "modules/radio_protocol.h"
 
-#ifndef CONSOLE_BAUDRATE_CONF
-#define CONSOLE_BAUDRATE    CONSOLE_BAUDRATE_19200
-#else
-#define CONSOLE_BAUDRATE    CONSOLE_BAUDRATE_CONF
-#endif
+/**
+ * @brief Radio protocol data message received callback
+ * 
+ * @param[in] data_msg  Data message
+ */
+static void radio_protocol_data_message_received_cb(radio_data_msg_union_p data_msg, int8_t rssi);
 
-#define TEST_ITERATIONS     300
-
-char msg[100];
+/**
+ * @brief Radio protocol command message received callback
+ * 
+ * @param[in] cmd_msg   Command message
+ */
+static void radio_protocol_command_message_received_cb(radio_cmd_msg_union_p cmd_msg, int8_t rssi);
 
 /**
  * @brief   Test entry point
@@ -57,43 +57,42 @@ char msg[100];
  */
 void *mainThread(void *arg0)
 {
-    bool res;
-    uint16_t counter = 0;
-
-    /* Test initialization */
-    if (!settings_load()) 
+        /* Load settings */
+    if (!settings_load())
     {
-        /* No settings found, use default */
         settings_set_default();
-        settings.sensor_readout_interval_sec = 0;
         settings_save();
     }
-    console_initialize(CONSOLE_BAUDRATE);
+
+#if defined(RADIO_ACTIVITY_LED) || defined(CONSOLE_LED)
+    /* Blink leds to indicate program start */
+    leds_blink_all(2);
+#endif
+
+    /* Initialize Radio protocol */
+    radio_protocol_process();
+    radio_protocol_register_data_message_received_callback(&radio_protocol_data_message_received_cb);
+    radio_protocol_register_command_message_received_callback(&radio_protocol_command_message_received_cb);
 
     /* Main loop */
-    while(1)
+    while (1)
     {
         /* Reset watch-dog */
         WDT_RESET();
 
-        /* Process console */
-        console_process();
-
-        if (!console_is_transmitting() && counter < TEST_ITERATIONS) 
-        {
-            /* Increment */
-            res = true;
-            counter++;
-            settings.sensor_readout_interval_sec = counter;
-            if (!settings_save() || settings_load() || (settings.sensor_readout_interval_sec != counter))
-            {
-                res = false;
-            }
-            memset(msg, 0, SIZE_OF_ARRAY(msg));
-            sprintf(msg, "Iteration %d - %s\r\n", counter, (res)? "OK" : "Fail");
-            console_write(msg, strlen(msg));
-        }
+        /* Process radio protocol */
+        radio_protocol_process();
     }
 }
 
-#endif /* TESTS_SETTINGS_TEST */
+void radio_protocol_data_message_received_cb(radio_data_msg_union_p data_msg, int8_t rssi)
+{
+
+}
+
+void radio_protocol_command_message_received_cb(radio_cmd_msg_union_p cmd_msg, int8_t rssi)
+{
+
+}
+
+#endif /* APPS_GATEWAY */

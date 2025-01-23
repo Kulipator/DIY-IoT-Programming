@@ -28,7 +28,7 @@
  * @file
  * @brief       Common board definition
  *
- * @author      Archil Pirmisashvili <archil@rf-networks.com>
+ * @author      Archil Pirmisashvili <kulipator@gmail.com>
  */
 
 #ifndef BOARDS_BOARD_COMMON_H

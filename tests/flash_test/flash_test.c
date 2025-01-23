@@ -5,7 +5,7 @@
  * @file
  * @brief       This test checks flash driver functionality.
  *
- * @author      Archil Pirmisashvili <archil@rf-networks.com>
+ * @author      Archil Pirmisashvili <kulipator@gmail.com>
  * @}
  */
 

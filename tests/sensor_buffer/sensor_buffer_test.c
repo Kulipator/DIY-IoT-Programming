@@ -28,7 +28,7 @@
  * @file
  * @brief       This test checks functionality of sensor buffer module.
  *
- * @author      Archil Pirmisashvili <archil@rf-networks.com>
+ * @author      Archil Pirmisashvili <kulipator@gmail.com>
  * @}
  */
 

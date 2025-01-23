@@ -28,7 +28,7 @@
  * @file
  * @brief       Sensor readouts buffer definition
  *
- * @author      Archil Pirmisashvili <archil@rf-networks.com>
+ * @author      Archil Pirmisashvili <kulipator@gmail.com>
  */
 
 #ifndef MODULES_SENSOR_BUFFER_H

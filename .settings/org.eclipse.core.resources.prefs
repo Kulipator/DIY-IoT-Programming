@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//Debug/apps/subdir_rules.mk=UTF-8
+encoding//Debug/apps/subdir_vars.mk=UTF-8
 encoding//Debug/boards/cc1310_launchpad/subdir_rules.mk=UTF-8
 encoding//Debug/boards/cc1310_launchpad/subdir_vars.mk=UTF-8
 encoding//Debug/boards/cc1350_launchpad/subdir_rules.mk=UTF-8
@@ -26,6 +28,8 @@ encoding//Debug/tests/leds_test/subdir_rules.mk=UTF-8
 encoding//Debug/tests/leds_test/subdir_vars.mk=UTF-8
 encoding//Debug/tests/radio_test/subdir_rules.mk=UTF-8
 encoding//Debug/tests/radio_test/subdir_vars.mk=UTF-8
+encoding//Debug/tests/sensor_buffer/subdir_rules.mk=UTF-8
+encoding//Debug/tests/sensor_buffer/subdir_vars.mk=UTF-8
 encoding//Debug/tests/settings_test/subdir_rules.mk=UTF-8
 encoding//Debug/tests/settings_test/subdir_vars.mk=UTF-8
 encoding//Debug/tests/subdir_rules.mk=UTF-8

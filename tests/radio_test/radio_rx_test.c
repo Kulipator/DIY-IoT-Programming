@@ -28,7 +28,7 @@
  * @file
  * @brief       This test checks receive functionality of RF driver.
  *
- * @author      Archil Pirmisashvili <archil@rf-networks.com>
+ * @author      Archil Pirmisashvili <kulipator@gmail.com>
  * @}
  */
 
