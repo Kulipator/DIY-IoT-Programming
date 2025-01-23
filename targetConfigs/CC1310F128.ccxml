@@ -13,7 +13,7 @@
             </property>
             <property id="Debug Probe Selection" Type="choicelist" Value="1">
                 <choice Name="Select by serial number" value="0">
-                    <property id="-- Enter the serial number" Type="stringfield" Value="NOserial"/>
+                    <property id="-- Enter the serial number" Type="stringfield" Value="L2000DK2"/>
                 </choice>
             </property>
             <platform XML_version="1.2" id="platform_0">

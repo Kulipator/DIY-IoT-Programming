@@ -259,7 +259,7 @@ bool radio_protocol_append_data_message(uint32_t dest_id, uint8_t *payload, size
 
 bool radio_protocol_append_command_message(uint32_t dest_id, uint8_t direction, uint8_t command, uint8_t *payload, size_t size)
 {
-     DEFINE_CRITICAL();
+    DEFINE_CRITICAL();
     radio_cmd_msg_union_p cmd_msg = (radio_cmd_msg_union_p)outgoing_message;
     if (outgoing_message[0] || size < 1 || size > 7 || payload == NULL)
     {
@@ -350,9 +350,19 @@ void radio_protocol_process_message_state_machine(void)
     radio_cmd_msg_union_p cmd;
     int8_t rssi = incoming_message[0];
     radio_msg_header_p header = (radio_msg_header_p)(incoming_message + 1);
+#ifdef ROOT_NODE
+    radio_msg_header_p out_header = (radio_msg_header_p)(outgoing_message);
+#endif    
+    radio_state = RADIO_STATE_IDLE;
     /* Proccess message */
     if (header->size > 0)
     {
+#ifdef ROOT_NODE
+        if (out_header->size && out_header->dest_id == header->source_id)
+        {
+            radio_state = RADIO_STATE_SEND;
+        }
+#endif
         if (data_message_received_cb && header->msg_type == RADIO_MSG_TYPE_DATA)
         {
             /* Data message, notify observer */
@@ -368,7 +378,6 @@ void radio_protocol_process_message_state_machine(void)
         /* Clear message */
         memset(incoming_message, 0, SIZE_OF_ARRAY(incoming_message));
     }
-    radio_state = RADIO_STATE_IDLE;
 }
 
 void radio_protocol_idle_state_machine(void)

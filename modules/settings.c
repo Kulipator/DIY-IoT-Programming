@@ -47,7 +47,7 @@ bool settings_load(void)
     /* Get load address */
     address = settings_find_pointer();
 
-    if (address < (FLASH_PAGE_SIZE - sizeof(unit_settings_t))) 
+    if (address < ((SETTINGS_PAGE + 1) * FLASH_PAGE_SIZE - sizeof(unit_settings_t))) 
     {
         /* Load settings structure from flash */
         flash_load(address, &settings, sizeof(unit_settings_t));
@@ -101,7 +101,7 @@ bool settings_save(void)
 void settings_set_default(void)
 {
     /* Set defaults */
-    settings.anchor = 0xA5A5A5A5UL;
+    settings.anchor = SETTINGS_ANCHOR;
     settings.sensor_readout_interval_sec = DEFAULT_SENSOR_READOUT_INTERVAL_SEC;
     /* Update checksum */
     settings.checksum = calculate_crc16_xmodem((uint8_t*)&settings, sizeof(unit_settings_t) - 2);

@@ -184,7 +184,7 @@ void radio_protocol_command_message_received_cb(radio_cmd_msg_union_p cmd_msg, i
         {
             /* Set register */
             memcpy(&reg, cmd_msg->cmd.params, 2);
-            memcpy(&val, cmd_msg->cmd.params + 2, 2);
+            memcpy(&val, cmd_msg->cmd.params + 2, 4);
             memcpy(params, cmd_msg->cmd.params, 2);
             memset(params + 2, 0, 5);
 

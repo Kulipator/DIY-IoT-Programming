@@ -182,5 +182,5 @@ void console_set_is_busy(bool is_busy);
 
 #endif /* DRIVERS_DRIVER_CONSOLE_H */
 
-#endif /* DISABLE_CONSOLE */
+#endif /* USE_CONSOLE */
 /** @} */

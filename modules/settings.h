@@ -57,7 +57,7 @@
 /**
  * @brief   Anchor bytes of settings structure
  */
-#define SETTINGS_ANCHOR 0xAABBCCDDUL
+#define SETTINGS_ANCHOR 0xAABBCCDDULL
 
 #ifdef __cplusplus
 extern "C" {

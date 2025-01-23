@@ -144,7 +144,7 @@ struct ATTRIBUTE_PACKED_ALIGNED(1) radio_cmd_message_s
     /* Command (Get - 1, Set - 2) */
     uint8_t command;
     /* Params */
-    uint16_t params[7];
+    uint8_t params[7];
 };
 
 /**
